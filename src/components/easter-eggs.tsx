@@ -20,25 +20,25 @@ const EasterEggs = () => {
     if (typeof console !== "undefined") {
       console.clear();
       console.log(
-        "%cWhoa, look at you! 🕵️‍♂️\n" +
-          "You seem to have discovered the secret console! 🔍\n" +
-          "Want to see some magic? ✨\n" +
-          "Just type %cmy first name%c and hit enter! 🎩🐇",
+        "%c¡Vaya, mírate! 🕵️‍♂️\n" +
+          "¡Parece que descubriste la consola secreta! 🔍\n" +
+          "¿Quieres ver magia? ✨\n" +
+          "Escribe %cmi nombre%c y presiona Enter. 🎩🐇",
         //   "Just press the %c'n'%c key and watch the magic happen! 🪄",
         "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:20px",
         "color: #00FF00; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:20px",
         "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;"
       );
 
-      ["naresh", "Naresh", "NARESH"].forEach((name) => {
+      ["josue", "Josue", "JOSUE"].forEach((name) => {
         // @ts-ignore
         if (Object.hasOwn(window, name)) return;
         Object.defineProperty(window, name, {
           get() {
             console.log(
-              "%c✨ Abra Kadabra! ✨\n\n" +
-                "You just summoned the magic of Naresh! 🧙‍♂️\n" +
-                "What??? youre not impressed? Fine, but remember: With great power comes great responsibility! 💻⚡",
+              "%c✨ ¡Abracadabra! ✨\n\n" +
+                "¡Acabas de invocar la magia de Josué! 🧙‍♂️\n" +
+                "¿Qué? ¿No te impresiona? Bueno, recuerda: ¡un gran poder conlleva una gran responsabilidad! 💻⚡",
 
               "color: #FF4500; font-size: 18px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:10px"
             );
@@ -46,7 +46,7 @@ const EasterEggs = () => {
             const timer = setTimeout(() => {
               console.log(
                 "%cPssttt! 🤫\n\n" +
-                  "Do you like cats?? 😺 If yes, then press 'n' on viewport and see what happens! 🐱✨",
+                  "¿Te gustan los gatos? 😺 Si sí, presiona 'n' en la página y mira qué pasa. 🐱✨",
                 "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;"
               );
               clearTimeout(timer);

@@ -1,9 +1,9 @@
 import ResumeView from "./resume-view";
 
 export const metadata = {
-  title: "Résumé | Josué Martínez",
+  title: "Currículum | Josué Martínez",
   description:
-    "Résumé of Josué Martínez. View online or download the PDF.",
+    "Currículum de Josué Martínez. Míralo en línea o descárgalo en PDF.",
 };
 
 export default function ResumePage() {

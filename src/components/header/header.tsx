@@ -68,7 +68,7 @@ const Header = ({ loader }: HeaderProps) => {
         <Button
           variant={"ghost"}
           onClick={() => setIsActive(!isActive)}
-          aria-label={isActive ? "Close menu" : "Open menu"}
+          aria-label={isActive ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={isActive}
           className={cn(
             styles.el,

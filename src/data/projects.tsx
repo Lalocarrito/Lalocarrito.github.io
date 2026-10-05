@@ -37,7 +37,7 @@ const ProjectsLinks = ({ live, repo }: { live?: string; repo?: string }) => {
           href={live}
         >
           <Button variant={"default"} size={"sm"}>
-            Visit Website
+            Visitar sitio
             <ArrowUpRight className="ml-3 w-5 h-5" />
           </Button>
         </Link>
@@ -115,7 +115,7 @@ const projects: Project[] = [
     id: "lasirenahmo",
     category: "Aplicación web",
     title: "La Sirena — Beauty Studio",
-    src: "/assets/projects-screenshots/lasirenahmo/landing.svg",
+    src: "/assets/projects-screenshots/lasirenahmo/landing.png",
     screenshots: [],
     skills: {
       frontend: [
@@ -149,7 +149,7 @@ const projects: Project[] = [
     id: "pollos-tech",
     category: "Sistema punto de venta",
     title: "PollosTech",
-    src: "/assets/projects-screenshots/pollos-tech/landing.svg",
+    src: "/assets/projects-screenshots/pollos-tech/landing.jpg",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.java],
@@ -176,7 +176,7 @@ const projects: Project[] = [
     id: "noticia-app",
     category: "Aplicación web",
     title: "Noticia App",
-    src: "/assets/projects-screenshots/noticia-app/landing.svg",
+    src: "/assets/projects-screenshots/noticia-app/landing.png",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.js, PROJECT_SKILLS.tailwind],
@@ -203,7 +203,7 @@ const projects: Project[] = [
     id: "sistema-escolar",
     category: "Herramienta web",
     title: "Sistema Escolar",
-    src: "/assets/projects-screenshots/sistema-escolar/landing.svg",
+    src: "/assets/projects-screenshots/sistema-escolar/landing.png",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.tailwind],
@@ -230,7 +230,7 @@ const projects: Project[] = [
     id: "change-extension",
     category: "Script",
     title: "Change Extension",
-    src: "/assets/projects-screenshots/change-extension/landing.svg",
+    src: "/assets/projects-screenshots/change-extension/landing.png",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.python],
@@ -257,7 +257,7 @@ const projects: Project[] = [
     id: "bin2dec",
     category: "Aplicación de escritorio",
     title: "Bin2Dec",
-    src: "/assets/projects-screenshots/bin2dec/landing.svg",
+    src: "/assets/projects-screenshots/bin2dec/landing.png",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.java],
@@ -284,7 +284,7 @@ const projects: Project[] = [
     id: "calculadora-coordenadas",
     category: "Aplicación de escritorio",
     title: "Calculadora de Coordenadas",
-    src: "/assets/projects-screenshots/calculadora-coordenadas/landing.svg",
+    src: "/assets/projects-screenshots/calculadora-coordenadas/landing.png",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.java],
@@ -311,7 +311,7 @@ const projects: Project[] = [
     id: "sistema-votacion-unison",
     category: "Aplicación web",
     title: "Sistema de Votación",
-    src: "/assets/projects-screenshots/sistema-votacion-unison/landing.svg",
+    src: "/assets/projects-screenshots/sistema-votacion-unison/landing.png",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.js],
@@ -338,7 +338,7 @@ const projects: Project[] = [
     id: "taskmaster",
     category: "Aplicación web",
     title: "TaskMaster",
-    src: "/assets/projects-screenshots/taskmaster/landing.svg",
+    src: "/assets/projects-screenshots/taskmaster/landing.png",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.js],

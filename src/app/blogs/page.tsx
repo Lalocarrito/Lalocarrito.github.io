@@ -3,8 +3,8 @@ import { getBlogPosts } from "@/lib/mdx";
 import BlogListClient from "./blog-list-client";
 
 export const metadata = {
-  title: "Blog | Portfolio",
-  description: "Thoughts, tutorials, and updates.",
+  title: "Blog | Portafolio",
+  description: "Ideas, tutoriales y novedades.",
 };
 
 export default function BlogPage() {

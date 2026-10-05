@@ -59,11 +59,11 @@ export default function BlogListClient({ posts }: { posts: Post[] }) {
             </span>
           </div>
           <h1 className="font-display text-3xl md:text-5xl leading-[0.95] tracking-tight">
-            Thoughts &<br />
-            <span className="text-[hsl(20,100%,70%)]">Dispatches</span>
+            Ideas &<br />
+            <span className="text-[hsl(20,100%,70%)]">Apuntes</span>
           </h1>
           <p className="mt-6 text-muted-foreground text-lg max-w-lg leading-relaxed font-sans">
-            Notes on building things, breaking things, and occasionally writing about it.
+            Notas sobre construir cosas, romper cosas y, de vez en cuando, escribir al respecto.
           </p>
         </motion.div>
 
@@ -83,7 +83,7 @@ export default function BlogListClient({ posts }: { posts: Post[] }) {
                 <div className="relative">
                   <div className="flex items-center gap-4 mb-6 text-sm text-muted-foreground font-sans">
                     <span className="text-[hsl(20,100%,70%)] font-medium tracking-[0.15em] uppercase text-xs">
-                      Featured
+                      Destacado
                     </span>
                     <span className="h-1 w-1 rounded-full bg-muted-foreground/50" />
                     <span className="flex items-center gap-1.5">
@@ -92,7 +92,7 @@ export default function BlogListClient({ posts }: { posts: Post[] }) {
                     </span>
                     <span className="flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5" />
-                      {readTime(featured.wordCount)} min read
+                      {readTime(featured.wordCount)} min de lectura
                     </span>
                   </div>
 
@@ -117,7 +117,7 @@ export default function BlogListClient({ posts }: { posts: Post[] }) {
                       ))}
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-[hsl(20,100%,70%)] transition-colors font-sans">
-                      Read article
+                      Leer artículo
                       <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
                   </div>
@@ -200,7 +200,7 @@ export default function BlogListClient({ posts }: { posts: Post[] }) {
             transition={{ delay: 0.3 }}
             className="text-center py-24"
           >
-            <p className="text-muted-foreground text-lg font-sans">No posts yet. Check back soon.</p>
+            <p className="text-muted-foreground text-lg font-sans">Aún no hay publicaciones. Vuelve pronto.</p>
           </motion.div>
         )}
       </div>

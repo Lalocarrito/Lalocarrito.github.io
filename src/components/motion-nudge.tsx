@@ -51,7 +51,7 @@ export default function MotionNudge() {
     >
       <button
         onClick={dismiss}
-        aria-label="Dismiss"
+        aria-label="Cerrar"
         className="absolute right-2 top-2 rounded-md p-1 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
       >
         <X className="size-4" />

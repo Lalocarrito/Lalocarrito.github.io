@@ -4,7 +4,7 @@ const footer: { title: string; href: string }[] = [
     href: "/blogs",
   },
   {
-    title: "Résumé",
+    title: "Currículum",
     href: "/resume",
   },
   {

@@ -135,7 +135,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             className="inline-flex items-center text-muted-foreground hover:text-[hsl(20,100%,70%)] transition-colors mb-12 group text-sm"
           >
             <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-            All posts
+            Todas las publicaciones
           </Link>
         </RevealAnimation>
 
@@ -176,7 +176,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               </div>
               <div className="flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5" />
-                {readTime} min read
+                {readTime} min de lectura
               </div>
             </div>
           </header>
@@ -197,7 +197,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               className="inline-flex items-center text-muted-foreground hover:text-[hsl(20,100%,70%)] transition-colors group text-sm"
             >
               <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to all posts
+              Volver a las publicaciones
             </Link>
           </div>
         </RevealAnimation>
