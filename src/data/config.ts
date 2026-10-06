@@ -31,8 +31,9 @@ const config = {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://github.com/Lalocarrito",
-    linkedin: "https://github.com/Lalocarrito",
+    twitter: "https://x.com/rracolal",
+    linkedin:
+      "https://www.linkedin.com/in/josu%C3%A9-mart%C3%ADnez-b37128380/",
     instagram: "https://github.com/Lalocarrito",
     facebook: "https://github.com/Lalocarrito",
     github: "https://github.com/Lalocarrito",

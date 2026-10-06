@@ -26,12 +26,12 @@ const FOCUS = [
 
 const AboutSection = () => {
   return (
-    <SectionWrapper id="about" className="max-w-5xl mx-auto px-4 py-20">
+    <SectionWrapper id="about" className="relative max-w-5xl mx-auto px-4 pt-28 pb-24 md:pt-36 md:pb-32">
       <SectionHeader
         id="about"
         title="Sobre mí"
         desc="Quién soy y qué me apasiona."
-        className="mb-16"
+        className="static mb-16"
       />
       <Card className="bg-white/70 dark:bg-black/70 backdrop-blur-sm rounded-xl">
         <CardHeader>
