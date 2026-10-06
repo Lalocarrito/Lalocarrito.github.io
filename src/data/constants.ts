@@ -5,7 +5,6 @@ export enum SkillNames {
   HTML = "html",
   CSS = "css",
   REACT = "react",
-  NEXTJS = "nextjs",
   TAILWIND = "tailwind",
   NODEJS = "nodejs",
   SUPABASE = "supabase",
@@ -69,14 +68,6 @@ export const SKILLS: Record<SkillNames, Skill> = {
       "Componentes, estado y hooks: la biblioteca que lo compone todo. ⚛️🔥",
     color: "#61dafb",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  [SkillNames.NEXTJS]: {
-    id: 7,
-    name: "nextjs",
-    label: "Next.js",
-    shortDescription: "El framework full-stack de React. 👑📜",
-    color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   [SkillNames.TAILWIND]: {
     id: 8,
@@ -199,7 +190,6 @@ export const EXPERIENCE: Experience[] = [
       "Integré autenticación (correo y Google OAuth) y recordatorios por WhatsApp.",
     ],
     skills: [
-      SkillNames.NEXTJS,
       SkillNames.REACT,
       SkillNames.TS,
       SkillNames.SUPABASE,
