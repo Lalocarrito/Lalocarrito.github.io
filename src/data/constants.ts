@@ -1,12 +1,10 @@
 // thoda zada ts ho gya idhar
 export enum SkillNames {
   JS = "js",
-  TS = "ts",
   HTML = "html",
   CSS = "css",
   REACT = "react",
   TAILWIND = "tailwind",
-  NODEJS = "nodejs",
   SUPABASE = "supabase",
   POSTGRES = "postgres",
   GIT = "git",
@@ -34,15 +32,6 @@ export const SKILLS: Record<SkillNames, Skill> = {
     shortDescription: "El lenguaje que da vida a la web desde 1995. 💯🚀",
     color: "#f0db4f",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  [SkillNames.TS]: {
-    id: 2,
-    name: "ts",
-    label: "TypeScript",
-    shortDescription:
-      "El primo estricto de JavaScript, con tipos y sin sorpresas. 💯🔒",
-    color: "#007acc",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   [SkillNames.HTML]: {
     id: 3,
@@ -76,14 +65,6 @@ export const SKILLS: Record<SkillNames, Skill> = {
     shortDescription: "Clases utilitarias para estilizar a toda velocidad. 🌪️🔥",
     color: "#38bdf8",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-  },
-  [SkillNames.NODEJS]: {
-    id: 9,
-    name: "nodejs",
-    label: "Node.js",
-    shortDescription: "JavaScript del lado del servidor. 🔙🔚",
-    color: "#6cc24a",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   [SkillNames.SUPABASE]: {
     id: 26,
@@ -191,7 +172,6 @@ export const EXPERIENCE: Experience[] = [
     ],
     skills: [
       SkillNames.REACT,
-      SkillNames.TS,
       SkillNames.SUPABASE,
       SkillNames.POSTGRES,
       SkillNames.TAILWIND,
@@ -211,11 +191,9 @@ export const EXPERIENCE: Experience[] = [
     ],
     skills: [
       SkillNames.POSTGRES,
-      SkillNames.NODEJS,
       SkillNames.GIT,
       SkillNames.GITHUB,
       SkillNames.REACT,
-      SkillNames.TS,
     ],
   },
 ];
