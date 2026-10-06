@@ -179,6 +179,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 {readTime} min de lectura
               </div>
             </div>
+
+            {post.metadata.image && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={post.metadata.image}
+                alt={post.metadata.title}
+                className="mt-8 w-full rounded-2xl border border-border/50 object-cover"
+              />
+            )}
           </header>
         </RevealAnimation>
 

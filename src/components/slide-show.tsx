@@ -20,20 +20,17 @@ import {
 const spring = { type: "spring", stiffness: 320, damping: 30 } as const;
 
 /**
- * Full-bleed screenshot at its natural aspect ratio. The carousel's `autoHeight`
- * resizes the track to the active slide, so shorter images don't inherit dead
- * space from a taller sibling — no matte or uniform frame needed.
+ * Fixed-ratio screenshot frame so every project preview has the same height
+ * (images are cropped with object-cover). The zoom dialog shows the full image.
  */
 const Frame = ({
   image,
   onZoom,
   priority,
-  onImageLoad,
 }: {
   image: string;
   onZoom: () => void;
   priority?: boolean;
-  onImageLoad?: () => void;
 }) => (
   <motion.button
     type="button"
@@ -44,17 +41,15 @@ const Frame = ({
     whileTap={{ scale: 0.992 }}
     transition={spring}
     aria-label="Open screenshot"
-    className="group/frame relative block w-full cursor-zoom-in overflow-hidden rounded-xl border border-border outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+    className="group/frame relative block aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-xl border border-border outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
   >
     <Image
       src={image}
       alt="Project screenshot"
-      width={1600}
-      height={1000}
+      fill
       priority={priority}
-      onLoad={onImageLoad}
       sizes="(max-width: 768px) 100vw, 720px"
-      className="block h-auto w-full"
+      className="object-cover"
     />
 
     {/* zoom affordance — revealed on hover only, never blurs the image */}
@@ -78,12 +73,6 @@ const SlideShow = ({ images }: { images: string[] }) => {
   const multiple = images.length > 1;
   const splideRef = useRef<any>(null);
 
-  // Next/Image loads asynchronously, so the slide's real height isn't known when
-  // Splide first measures it. Re-trigger autoHeight once each image is decoded.
-  const remeasure = useCallback(() => {
-    splideRef.current?.splide?.emit("resize");
-  }, []);
-
   const step = useCallback(
     (dir: number) =>
       setSelectedIndex((i) =>
@@ -103,6 +92,23 @@ const SlideShow = ({ images }: { images: string[] }) => {
     return () => window.removeEventListener("keydown", onKey);
   }, [isOpen, multiple, step]);
 
+  // Keyboard navigation for the carousel itself (when the zoom dialog is closed).
+  useEffect(() => {
+    if (!multiple || isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      if (
+        t &&
+        (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)
+      )
+        return;
+      if (e.key === "ArrowRight") splideRef.current?.splide?.go(">");
+      else if (e.key === "ArrowLeft") splideRef.current?.splide?.go("<");
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [multiple, isOpen]);
+
   return (
     <>
       {multiple ? (
@@ -118,7 +124,6 @@ const SlideShow = ({ images }: { images: string[] }) => {
             easing: "cubic-bezier(0.16, 1, 0.3, 1)",
             perPage: 1,
             perMove: 1,
-            autoHeight: true,
             pauseOnHover: true,
             pauseOnFocus: true,
             arrows: true,
@@ -133,7 +138,6 @@ const SlideShow = ({ images }: { images: string[] }) => {
                   image={image}
                   priority={idx === 0}
                   onZoom={() => setSelectedIndex(idx)}
-                  onImageLoad={remeasure}
                 />
               </SplideSlide>
             ))}

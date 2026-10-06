@@ -18,7 +18,15 @@ function Footer() {
         <Suspense fallback={null}>
           <CopyrightYear />
         </Suspense>{" "}
-        {config.author}. Todos los derechos reservados.
+        {config.author}. Todos los derechos reservados. ·{" "}
+        <a
+          href="https://github.com/Naresh-Khatri/3d-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-foreground"
+        >
+          Repo original
+        </a>
       </p>
       <SocialMediaButtons />
       <nav className="flex gap-4 sm:gap-6 z-10">

@@ -12,15 +12,15 @@ import {
 const FOCUS = [
   {
     title: "Bases de datos",
-    desc: "SQL, PostgreSQL, modelado relacional y diseño de datos.",
+    desc: "SQL, PostgreSQL y MySQL: modelado relacional y diseño de datos.",
   },
   {
     title: "Desarrollo web",
-    desc: "React, Next.js y Flask para aplicaciones completas.",
+    desc: "React, Next.js y C# para aplicaciones completas.",
   },
   {
     title: "Escritorio",
-    desc: "Java, C# y VB para aplicaciones de escritorio.",
+    desc: "Java y Python, con algo de VB.NET.",
   },
 ];
 
@@ -35,22 +35,31 @@ const AboutSection = () => {
       />
       <Card className="bg-white/70 dark:bg-black/70 backdrop-blur-sm rounded-xl">
         <CardHeader>
-          <CardTitle className="text-2xl">Desarrollador de Software</CardTitle>
+          <CardTitle className="text-2xl">Desarrollador Full Stack</CardTitle>
           <CardDescription>
             Especial interés en bases de datos
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="text-muted-foreground leading-relaxed">
-            Soy {config.author}, desarrollador de software con especial interés en
-            las bases de datos: el modelado, el diseño y el manejo de datos con
-            SQL y PostgreSQL es el área que más me apasiona. Actualmente estudio
-            Ingeniería en Sistemas de Información en la Universidad de Sonora y
-            he realizado trabajo freelance, como la plataforma de reservas La
-            Sirena.
+            Soy {config.author}, desarrollador full stack con especial interés en
+            las bases de datos. Trabajo desde 2022 en{" "}
+            <a
+              href="https://sescolar.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground underline underline-offset-2"
+            >
+              Sescolar
+            </a>
+            , un sistema de control escolar, donde abarco desde el código y el
+            modelado de datos hasta el despliegue y las pruebas. Actualmente
+            estudio Ingeniería en Sistemas de Información en la Universidad de
+            Sonora y también realizo trabajo freelance, como la plataforma de
+            reservas La Sirena.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Trabajo con VB, C#, SQL, PostgreSQL, Java y Python, y sigo
+            Trabajo con C#, VB.NET, SQL, MySQL, PostgreSQL, Java y Python, y sigo
             aprendiendo React. Disfruto resolver problemas de datos y construir
             software completo, del frontend a la base de datos.
           </p>

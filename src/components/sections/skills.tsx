@@ -67,7 +67,10 @@ const SkillsSection = () => {
               width={44}
               height={44}
               loading="lazy"
-              className="relative size-9 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-110 md:size-11"
+              className={cn(
+                "relative size-9 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-110 md:size-11",
+                (skill.name === "github" || skill.name === "vercel") && "dark:invert"
+              )}
             />
             <span className="relative text-center text-xs font-medium text-foreground/80 transition-colors group-hover:text-foreground md:text-sm">
               {skill.label}

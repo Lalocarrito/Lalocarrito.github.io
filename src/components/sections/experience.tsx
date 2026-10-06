@@ -66,7 +66,18 @@ const ExperienceCard = ({
                 {experience.title}
               </CardTitle>
               <div className="text-base font-medium text-muted-foreground">
-                {experience.company}
+                {experience.url ? (
+                  <a
+                    href={experience.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-2 hover:text-foreground transition-colors"
+                  >
+                    {experience.company}
+                  </a>
+                ) : (
+                  experience.company
+                )}
               </div>
             </div>
             <Badge variant="secondary" className="w-fit font-mono text-xs font-normal">
@@ -93,7 +104,10 @@ const ExperienceCard = ({
                   <img
                     src={skill.icon}
                     alt={skill.label}
-                    className="w-3.5 h-3.5 object-contain opacity-80"
+                    className={cn(
+                      "w-3.5 h-3.5 object-contain opacity-80",
+                      (skillName === "github" || skillName === "vercel") && "dark:invert"
+                    )}
                   />
                   {skill.label}
                 </Badge>

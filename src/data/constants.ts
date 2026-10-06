@@ -7,6 +7,11 @@ export enum SkillNames {
   TAILWIND = "tailwind",
   SUPABASE = "supabase",
   POSTGRES = "postgres",
+  MYSQL = "mysql",
+  PYTHON = "python",
+  JAVA = "java",
+  CSHARP = "csharp",
+  PHP = "php",
   GIT = "git",
   GITHUB = "github",
   NPM = "npm",
@@ -64,7 +69,7 @@ export const SKILLS: Record<SkillNames, Skill> = {
     label: "Tailwind",
     shortDescription: "Clases utilitarias para estilizar a toda velocidad. 🌪️🔥",
     color: "#38bdf8",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   [SkillNames.SUPABASE]: {
     id: 26,
@@ -81,6 +86,46 @@ export const SKILLS: Record<SkillNames, Skill> = {
     shortDescription: "SQL pero elegante y potente. 💅🐘",
     color: "#336791",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  [SkillNames.MYSQL]: {
+    id: 32,
+    name: "mysql",
+    label: "MySQL",
+    shortDescription: "La base de datos relacional más popular. 🐬",
+    color: "#4479A1",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  [SkillNames.PYTHON]: {
+    id: 27,
+    name: "python",
+    label: "Python",
+    shortDescription: "El lenguaje versátil para scripts, datos y backend. 🐍",
+    color: "#3776AB",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  [SkillNames.JAVA]: {
+    id: 28,
+    name: "java",
+    label: "Java",
+    shortDescription: "Lenguaje robusto y multiplataforma. ☕",
+    color: "#ED8B00",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  [SkillNames.CSHARP]: {
+    id: 29,
+    name: "csharp",
+    label: "C#",
+    shortDescription: "El lenguaje de Microsoft para aplicaciones y backend. 🟣",
+    color: "#68217A",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  },
+  [SkillNames.PHP]: {
+    id: 31,
+    name: "php",
+    label: "PHP",
+    shortDescription: "El lenguaje clásico del backend web. 🐘",
+    color: "#777BB4",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
   },
   [SkillNames.GIT]: {
     id: 13,
@@ -154,11 +199,31 @@ export type Experience = {
   endDate: string;
   title: string;
   company: string;
+  url?: string;
   description: string[];
   skills: SkillNames[];
 };
 
 export const EXPERIENCE: Experience[] = [
+  {
+    id: 3,
+    startDate: "2022",
+    endDate: "Actual",
+    title: "Desarrollador Full Stack",
+    company: "Sescolar",
+    url: "https://sescolar.com/",
+    description: [
+      "Desarrollo full stack en una empresa de software de control escolar.",
+      "Abarco desde el código y el modelado de la base de datos hasta el despliegue y las pruebas.",
+      "Trabajo principalmente con C# y MySQL.",
+    ],
+    skills: [
+      SkillNames.CSHARP,
+      SkillNames.MYSQL,
+      SkillNames.GIT,
+      SkillNames.GITHUB,
+    ],
+  },
   {
     id: 1,
     startDate: "2025",

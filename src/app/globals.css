@@ -192,6 +192,10 @@ body > canvas {
 .portfolio-slider .splide__arrow--prev {
   left: 0.75rem;
 }
+/* Splide flips the prev arrow's svg (scaleX(-1)); undo it so our chevron points left. */
+.portfolio-slider .splide__arrow--prev svg {
+  transform: none;
+}
 .portfolio-slider .splide__arrow--next {
   right: 0.75rem;
 }

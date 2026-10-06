@@ -81,6 +81,14 @@ export default function BlogListClient({ posts }: { posts: Post[] }) {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[hsl(20,100%,70%)]/10 to-transparent rounded-bl-full" />
 
                 <div className="relative">
+                  {featured.metadata.image && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={featured.metadata.image}
+                      alt={featured.metadata.title}
+                      className="mb-6 w-full rounded-xl border border-border/50 object-cover"
+                    />
+                  )}
                   <div className="flex items-center gap-4 mb-6 text-sm text-muted-foreground font-sans">
                     <span className="text-[hsl(20,100%,70%)] font-medium tracking-[0.15em] uppercase text-xs">
                       Destacado
