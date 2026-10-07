@@ -6,9 +6,8 @@ import {
   ResponsiveDialogTrigger,
 } from "../ui/responsive-dialog";
 import { FloatingDock } from "../ui/floating-dock";
-import { ScrollArea } from "../ui/scroll-area";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import { motion } from "motion/react";
 
 import projects, { Project } from "@/data/projects";
@@ -83,8 +82,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   <Link
                     href={project.github}
                     target="_blank"
-                    className="text-xs text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2"
+                    rel="noopener noreferrer"
+                    aria-label="Ver código en GitHub"
+                    className="group flex items-center gap-2 bg-white text-black text-sm font-medium px-4 py-1.5 rounded-full hover:bg-white/80 transition-colors"
                   >
+                    <Github className="w-4 h-4" />
                     Código
                   </Link>
                 )}
@@ -101,7 +103,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
 
           {/* Scrollable content */}
-          <ScrollArea className="flex-1" type="always" data-lenis-prevent>
+          <div
+            className="flex-1 overflow-y-auto overscroll-contain"
+            data-lenis-prevent
+          >
             <div className="px-8 py-8">
               {/* Tech stack */}
               <motion.div
@@ -140,7 +145,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 {project.content}
               </motion.div>
             </div>
-          </ScrollArea>
+          </div>
 
         </ResponsiveDialogContent>
       </ResponsiveDialog>
