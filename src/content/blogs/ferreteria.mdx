@@ -1,0 +1,57 @@
+---
+title: "Ferretería UNISON — Caso de estudio y diseño de sistema"
+publishedAt: "2026-09-29"
+summary: "Análisis, requerimientos y diseño de interfaz de un sistema de ventas e inventario para una ferretería (Figma)."
+image: "/assets/blog/ferreteria.svg"
+author: "Josué Martínez"
+tags: ["análisis", "UI/UX", "Figma", "4to semestre"]
+---
+
+# Ferretería UNISON — Caso de estudio y diseño de sistema
+
+La **Ferretería UNISON** manejaba sus ventas y su control de inventario en **papel y hojas de cálculo**, lo que provocaba errores de conteo, pérdida de ventas por falta de inventario, dificultad para generar reportes, control manual de proveedores y lentitud en el cobro. El objetivo: diseñar un sistema que automatizara sus procesos.
+
+**Objetivos del sistema:** controlar inventario, registrar ventas, administrar proveedores, generar reportes y mejorar la atención al cliente.
+
+## Requerimientos funcionales
+
+- Registrar ventas.
+- Controlar inventario (agregar, editar y eliminar productos; actualizar existencias tras cada venta).
+- Corte de caja con reportes exportables a PDF.
+- Filtrar productos por categorías.
+- Autenticación de usuarios (login).
+- Registrar y administrar proveedores.
+- Cobrar con múltiples métodos de pago.
+- Buscar productos por nombre o código de barras.
+- Facturación de productos.
+- Generar tickets al finalizar la compra.
+- Administrar empleados: registrar, asignar rol, editar datos y cambiar estado.
+- Cancelar una venta en curso o quitar un artículo antes de cobrar.
+- Personalizar nombre del negocio, dirección y moneda.
+- Buscar ventas por folio para reembolsos (cantidad a devolver y motivo).
+- Calcular el monto exacto a devolver a partir del efectivo recibido.
+- Verificar en tiempo real tarjetas y vales, con alertas de transacciones no válidas.
+- Registrar entrada de mercancía (cantidad solicitada vs. recibida, con firma digital del repartidor).
+- Copias de seguridad manuales y respaldos automáticos diarios.
+
+## Requerimientos no funcionales
+
+- Cobro fácil y rápido (escaneo de QR y códigos de barras).
+- Responder en tiempo real (menos de 2 segundos) al registrar una venta.
+- Funcionar fluidamente en equipos con recursos limitados.
+- La base de datos debe soportar el crecimiento del inventario.
+- Compatible con el sistema operativo **Windows**.
+- Informar el éxito o fallo de cada operación con modales.
+- Indicadores visuales claros (etiqueta de "Stock bajo").
+- Restringir la información según el rol (Admin o Cajero).
+- Resaltar campos faltantes y bloquear el envío hasta que todo sea correcto.
+
+## Diseño de la interfaz
+
+Diseñamos la interfaz en **Figma**. Aquí puedes recorrer el prototipo interactivo:
+
+<FigmaEmbed src="https://www.figma.com/proto/ZPrmXOwlIqRrJq942UrBid/Ferreter%C3%ADa-UNISON?node-id=91-16" title="Ferretería UNISON — Prototipo en Figma" />
+
+## Lo que me llevé
+
+Levantar requerimientos y traducirlos a un diseño de interfaz me ayudó a entender que un buen sistema empieza por entender bien el problema del cliente, antes de escribir una sola línea de código.

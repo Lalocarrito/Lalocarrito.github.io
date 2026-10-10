@@ -42,7 +42,7 @@ const AboutSection = () => {
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="text-muted-foreground leading-relaxed">
-            Soy {config.author}, desarrollador full stack con especial interés en
+            Soy {config.fullName}, desarrollador full stack con especial interés en
             las bases de datos. Trabajo desde 2022 en{" "}
             <a
               href="https://sescolar.com/"

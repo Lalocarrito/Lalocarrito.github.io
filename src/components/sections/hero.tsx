@@ -79,16 +79,6 @@ const HeroSection = () => {
                     Desarrollador de Software
                   </p>
                 </BlurIn>
-                <BlurIn delay={1.3}>
-                  <p
-                    className={cn(
-                      "md:self-start mt-2 font-medium text-sm text-slate-400 dark:text-zinc-500",
-                      "cursor-default sm:text-base whitespace-nowrap"
-                    )}
-                  >
-                    {config.fullName}
-                  </p>
-                </BlurIn>
               </div>
               <div className="mt-8 flex flex-col gap-3 w-fit">
                 <Link

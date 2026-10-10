@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays, Clock, User } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import RevealAnimation from "@/components/reveal-animations";
+import FigmaEmbed from "@/components/figma-embed";
 
 export async function generateStaticParams() {
   const posts = getBlogPosts();
@@ -110,6 +111,7 @@ const components = {
   strong: (props: any) => (
     <strong className="text-foreground font-semibold" {...props} />
   ),
+  FigmaEmbed,
 };
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {

@@ -1,0 +1,33 @@
+---
+title: "Análisis de calidad de conectividad y hábitos digitales"
+publishedAt: "2026-09-27"
+summary: "Estudio estadístico sobre la calidad de internet de 184 estudiantes: velocidad real vs. contratada, costos y satisfacción."
+image: "/assets/blog/conectividad.svg"
+author: "Josué Martínez"
+tags: ["datos", "Python", "estadística", "4to semestre"]
+---
+
+# Análisis de calidad de conectividad y hábitos digitales
+
+Proyecto final de **Análisis de Datos I** (4to semestre). Evaluamos la conectividad doméstica de **184 estudiantes** de Ciencias de la Computación de la UNISON (campus Hermosillo) para medir la diferencia entre la velocidad **prometida** por los proveedores y el **rendimiento real**.
+
+## Metodología
+
+Diseñamos una **encuesta de 16 preguntas** en Microsoft Forms (distribuida por QR y WhatsApp, pidiendo el expediente para evitar respuestas duplicadas) para recolectar variables cuantitativas (velocidades, costo) y cualitativas (tipo de conexión, satisfacción en escala Likert). Con un nivel de confianza del 95%, la muestra mínima era de 174 personas; logramos 184.
+
+## Herramientas
+
+Usé **Excel** para ordenar y filtrar los datos, y **Python** (Pandas, NumPy, Matplotlib, Seaborn y SciPy) para el análisis: medidas de tendencia central y dispersión, histogramas, ojivas, diagramas de caja, pruebas de hipótesis Z y modelos de regresión lineal.
+
+## Resultados
+
+- La velocidad real de bajada (~280 Mbps) es menor a la contratada (~303 Mbps), pero la diferencia **no resultó estadísticamente significativa** (p = 0.088) por la alta variabilidad del servicio.
+- Las conexiones por **cable Ethernet** son más estables que Wi-Fi 2.4 GHz (p = 0.0078).
+- Los paquetes de más de **$655 MXN** reportan menos interrupciones (95% de confianza).
+- La **correlación costo-velocidad** fue positiva y fuerte (r = 0.7090): el costo explica ~50% de la variabilidad en la velocidad real.
+- La cantidad de dispositivos conectados tuvo una relación prácticamente nula con las fallas (r = -0.1618).
+- La **satisfacción promedio** fue de **3.92 / 5**.
+
+## Conclusión
+
+El estudio confirma que una buena conexión depende más de **cómo y con qué te conectas** (medio de conexión y plan contratado) que de cuántos dispositivos uses; y que buena parte del rendimiento real queda fuera del control del usuario, en la infraestructura del proveedor.
