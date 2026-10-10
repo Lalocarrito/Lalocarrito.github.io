@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   title: config.title,
   description: config.description.long,
   keywords: config.keywords,
-  authors: [{ name: config.author }],
+  authors: [{ name: config.fullName }],
   openGraph: {
     title: config.title,
     description: config.description.short,

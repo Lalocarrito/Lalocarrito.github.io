@@ -20,6 +20,7 @@ const config = {
     "SQL",
   ],
   author: "Josué Martínez",
+  fullName: "Josué Ignacio Martínez Ruiz",
   email: "josuemtzruiz@icloud.com",
   site: "https://lalocarrito.github.io",
 
